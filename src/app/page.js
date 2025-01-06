@@ -1,101 +1,50 @@
-import Image from "next/image";
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Introduction from "../components/Introduction";
+import Project from "../components/Project";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="p-4 flex flex-col">
+      <div className="p-8">
+        <div>
+          <img
+            src='/Images/kemiao2.jpg'
+            className='rounded-full w-24 h-24 md:w-28 md:h-28 border-border border-2 mb-6'
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <h1 className="text-3xl text-text md:text-4xl pb-2">Hello, </h1>
+        <h2 className="text-text md:text-4xl text-3xl">I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-gstart to-gend font-bold md:text-5xl text-4xl">Jiacheng He</span>!</h2>
+        <div className="pt-2 flex flex-col md:flex-row">
+          <p className="text-sm md:text-base">每一段旅行都有终点.&nbsp;</p>
+          <p className="text-sm md:text-base">Every journey has its destination.</p>
+        </div>
+        <div className="text-text2 mt-2 italic">
+          <span>#Developer </span> <span>#Harry</span> <span>#何佳骋</span>
+        </div>
+        <Introduction />
+      </div>
+
+      <div className="mt-28 py-4 flex flex-col md:flex-row md:gap-y-4">
+        <div className="w-full md:w-4/6 mb-36 md:mb-2">
+          <div className="flex flex-row justify-between text-xl md:text-2xl pb-8 p-2">
+            <h2 className="text-text">Starred Repo (5)</h2>
+            <a
+              href=" "
+              className="p-2 rounded-lg text-text2 text-xl border-border border flex items-center gap-1 animate-bounce hover:bg-card"
+              aria-label="More information"
+            >
+              <span className="text-base">More</span>
+              <ArrowOutwardIcon />
+            </a>
+
+          </div>
+          <Project />
+        </div>
+        <aside className="w-full md:w-2/6 flex flex-col md:ml-10 gap-y-4 mt-0">
+          <div className="w-full border-border rounded-lg border h-96"></div>
+          <div className="w-full border-border rounded-lg border h-60"></div>
+        </aside>
+      </div>
     </div>
   );
 }
