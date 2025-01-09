@@ -1,6 +1,14 @@
+'use client';
+import { motion } from "motion/react";
+
 export default function Banner({ Image="/Images/fushi.jpg" }) {
     return (
-        <div className="relative w-full h-60 md:h-80">
+        <motion.div className="relative w-full h-60 md:h-80"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+        >
+            
             <img
             src={Image}
             alt="Banner"
@@ -14,6 +22,6 @@ export default function Banner({ Image="/Images/fushi.jpg" }) {
                 className="border-border border-2 rounded-lg w-full h-full hover:scale-105 transition-transform duration-300 overflow-hidden"
             />
             </div>
-        </div>
+        </motion.div>
     )
 }

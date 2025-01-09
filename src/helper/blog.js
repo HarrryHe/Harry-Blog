@@ -35,3 +35,32 @@ export async function getBlog(slug) {
     const { data, content } = matter(fileContent);
     return { data, content };
 }
+
+export function getTags (blogs) {
+    const tagMap = new Map();
+    blogs.forEach((blog) => {
+        blog.tags.forEach((tag) => {
+            if(tagMap.has(tag)) {
+                tagMap.set(tag, [...get(tag), blog]);
+            }
+            else {
+                tagMap.set(tag, [blog]);
+            }
+        });
+    });
+
+    return tagMap;
+}
+
+export function getTagBlog (tagMap = new Map(), tag='') {
+    if(!tagMap) {
+        return [];
+    }
+
+    if(tagMap.has(tag)){
+        return tagMap.get(tag);
+    }
+    else {
+        return [];
+    }
+}

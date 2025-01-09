@@ -11,8 +11,8 @@ export default function Providers({ children }) {
     }, []);
 
     if (!mounted) {
-    return null; // Render children without ThemeProvider during SSR
+        return null;
     }
 
-    return <ThemeProvider attribute="class">{ children }</ThemeProvider>; // Wrap children with ThemeProvider after mount
+    return <ThemeProvider attribute="class">{ children }</ThemeProvider>;
 }
