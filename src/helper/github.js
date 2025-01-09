@@ -20,7 +20,7 @@ export async function fetchGitHubRepos(username, limit = 5) {
             url: repo.html_url,
             stars: repo.stargazers_count,
             language: repo.language || "Not specified",
-            created_at: new Date(repo.created_at),
+            created_at: new Date(repo.created_at).toLocaleDateString(),
         }))
         .sort((a, b) => b.stars - a.stars);
 

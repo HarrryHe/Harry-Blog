@@ -1,8 +1,11 @@
+import { Inter } from '@next/font/google';
 import { Roboto_Mono } from 'next/font/google';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./globals.css";
 import Providers from "./Provider";
+
+const inter = Inter({ weight: ['400', '700'], subsets: ['latin'] });
 
 const roboto = Roboto_Mono({ weight: ['400', '700'], subsets: ['latin'] });
 
@@ -15,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`flex flex-col min-h-screen bg-bg text-text transition-colors duration-500 md:px-12 sm:px-6 ${roboto.className}`}
+        className={`flex flex-col min-h-screen bg-bg text-text tracking-tight transition-colors duration-500 md:px-12 sm:px-6 ${roboto.className}`}
       >
         <Providers>
           <Header />

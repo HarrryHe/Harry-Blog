@@ -2,21 +2,6 @@
 import { fetchGitHubRepos } from '@/helper/github';
 import { useEffect, useState } from "react";
 
-const languageIcons = {
-    Java: "/Icons/java.svg",
-    Python: "/Icons/python.svg",
-    JavaScript: "/Icons/javascript.svg",
-    TypeScript: "/Icons/typescript.svg",
-    Vue: "/Icons/vue.svg",
-    "Unknown": "/Icons/unknown.svg",
-}
-
-function LanguageIcon({ language }) {
-    const getLanguageIcon = (lang) => languageIcons[lang] || languageIcons["Not specified"];
-    return <img src={getLanguageIcon(language) || "/Icons/unknown.svg"} alt={`${language} logo`} className="w-6 h-6" />;
-}
-
-
 export default function Project() {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -39,26 +24,29 @@ export default function Project() {
     }
 
     return (
-        <div>
-            <ul className="list-none space-y-6">
+        <div className="w-full mb-12">
+            <ul className="list-disc space-y-2">
                 {repos.map((repo) => (
-                <li key={repo.name} className="flex items-center space-x-4">
-                    <LanguageIcon language={repo.language} />
-                    <div>
+                <li
+                    key={repo.name}
+                    className="flex space-x-2 border-b border-border items-center p-2"
+                >
                     <a
-                        href={repo.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gstart hover:underline font-bold"
+                    href={repo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text hover:underline font-semibold text-base"
                     >
-                        {repo.name}
+                    {repo.name}
                     </a>
-                    <p className="text-sm text-text2">{repo.description}</p>
-                    <p className="text-xs text-text">Stars: {repo.stars}</p>
+
+                    <div className="">
+                    <p className="text-sm text-text2">{repo.created_at} <span className="tracking-wider">⭐{repo.stars}</span></p>
                     </div>
                 </li>
                 ))}
             </ul>
         </div>
+
     );
 }

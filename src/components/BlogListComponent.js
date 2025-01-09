@@ -4,29 +4,26 @@ import Blogs from "@/components/Blogs";
 import Pagination from "@mui/material/Pagination";
 import { useState } from "react";
 
-const ITEMS_PER_PAGE = 3;
+export default function BlogListComponent({ blogs, itemNum=10 }) {
+    const totalArticles = blogs.length;
 
-export default function BlogListComponent({ blogs }) {
     const [currentPage, setCurrentPage] = useState(1);
 
     const handlePageChange = (event, page) => {
         setCurrentPage(page);
     };
 
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const startIndex = (currentPage - 1) * itemNum;
+    const endIndex = startIndex + itemNum;
     const currentBlogs = blogs.slice(startIndex, endIndex);
 
     return (
-        <div className="p-4 pt-8 px-12 md:px-16 lg:px-24 flex flex-col">
-            <h1 className="font-bold text-2xl md:text-3xl text-text mb-8 md:mb-10 border-gstart border-l-4 px-4">
-                ✒️ Blog List
-            </h1>
+        <div className="flex flex-col">
             <Blogs blogs={currentBlogs} />
 
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-10 mb-6">
                 <Pagination
-                    count={Math.ceil(blogs.length / ITEMS_PER_PAGE)}
+                    count={Math.ceil(blogs.length / itemNum)}
                     page={currentPage}
                     onChange={handlePageChange}
                     sx={{

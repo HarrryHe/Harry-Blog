@@ -14,13 +14,7 @@ export default function Header() {
         setTheme(theme === 'light' ? 'dark' : 'light');
     }
     return (
-        <header className='flex w-full top-0 z-10 p-4 justify-between'>
-            <div className=''>
-                <img
-                src='/Images/kemiao.jpg'
-                className='rounded-md w-10 h-10 border-border border hover:animate-spin'
-                />
-            </div>
+        <header className='flex w-full top-0 z-10 p-4 justify-end'>
 
             <div className='flex items-center justify-between gap-x-4 px-2'>
                 <NavBar />
