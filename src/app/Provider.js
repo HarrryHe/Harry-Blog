@@ -14,5 +14,5 @@ export default function Providers({ children }) {
         return null;
     }
 
-    return <ThemeProvider attribute="class">{ children }</ThemeProvider>;
+    return <ThemeProvider attribute="class" defaultTheme="dark">{ children }</ThemeProvider>;
 }
