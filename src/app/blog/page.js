@@ -8,7 +8,7 @@ export default async function BlogList() {
 
     return (
         <div className="px-4 flex flex-col">
-            <Banner Image='Images/winter.jpg' />
+            <Banner Image='Images/winter2.jpg' />
             <section className="mt-24">
                 <MotionWrapper
                 initial={{ opacity: 0 }}

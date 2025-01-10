@@ -1,6 +1,7 @@
 'use client';
 import { fetchGitHubRepos } from '@/helper/github';
 import { useEffect, useState } from "react";
+import MotionWrapper from './MotionWrapper';
 
 export default function Project() {
     const [repos, setRepos] = useState([]);
@@ -25,6 +26,12 @@ export default function Project() {
 
     return (
         <div className="w-full mb-12">
+            <MotionWrapper
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5 }}
+            >
             <ul className="list-disc space-y-2">
                 {repos.map((repo) => (
                 <li
@@ -46,6 +53,7 @@ export default function Project() {
                 </li>
                 ))}
             </ul>
+            </MotionWrapper>
         </div>
 
     );

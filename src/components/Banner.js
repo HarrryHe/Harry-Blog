@@ -6,7 +6,7 @@ export default function Banner({ Image="/Images/fushi.jpg" }) {
         <motion.div className="relative w-full h-60 md:h-80"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
+            transition={{ ease: "easeInOut", duration: 2 }}
         >
             
             <img

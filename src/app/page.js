@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div className="px-4 flex flex-col">
       
-      <Banner Image='/Images/fushi.jpg' />
+      <Banner Image='/Images/winter1.jpg' />
       <MainPage recent5Blogs={recent5Blogs}/>
       
     </div>

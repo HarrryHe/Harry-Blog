@@ -51,16 +51,3 @@ export function getTags (blogs) {
 
     return tagMap;
 }
-
-export function getTagBlog (tagMap = new Map(), tag='') {
-    if(!tagMap) {
-        return [];
-    }
-
-    if(tagMap.has(tag)){
-        return tagMap.get(tag);
-    }
-    else {
-        return [];
-    }
-}

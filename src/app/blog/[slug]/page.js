@@ -1,3 +1,5 @@
+import BackButton from '@/components/BackButton';
+import GiscusComment from '@/components/GiscusComment';
 import MotionWrapper from '@/components/MotionWrapper';
 import { getBlog, getBlogList } from '@/helper/blog';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -27,6 +29,8 @@ export default async function Blog({ params }){
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}>
+                
+                <BackButton />
                 {/* 博客封面 */}
                 {data.cover && (
                     <div className="mb-8">
@@ -61,6 +65,8 @@ export default async function Blog({ params }){
                 <article className="mt-16 max-w-none prose dark:prose-invert prose-neutral prose-base prose-img:rounded-md prose-img:shadow-md prose-h1:text-2xl prose-h2:text-xl prose-p:text-sm prose-li:text-sm prose-p:tracking-tight prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-code:text-sm">
                     <MDXRemote source={content} />
                 </article>
+
+                <GiscusComment />
             </MotionWrapper>
         </div>
     )
