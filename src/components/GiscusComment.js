@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 export default function GiscusComment() {
     const { theme } = useTheme();
-    const [currentTheme, setCurrentTheme] = useState('dark');
+    const [currentTheme, setCurrentTheme] = useState('noborder_dark');
 
     useEffect(() =>{
         if (theme === 'dark') {
