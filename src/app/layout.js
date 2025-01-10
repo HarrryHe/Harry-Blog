@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scrollbar">
       <body
         className={`flex flex-col min-h-screen bg-bg text-text tracking-tight transition-colors duration-500 md:px-12 sm:px-6 ${roboto.className}`}
       >

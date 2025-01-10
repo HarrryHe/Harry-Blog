@@ -23,3 +23,7 @@
     --gradient-end: #30e6f0;
   }
 }
+
+.scrollbar {
+  scrollbar-width: thin;
+}

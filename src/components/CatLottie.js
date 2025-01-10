@@ -8,7 +8,7 @@ export default function CatLottie() {
             loop
             animationData={catLottie}
             play
-            style={{ width: 125, height: 125 }}
+            style={{ width: 250, height: 250 }}
         />
     )
 }

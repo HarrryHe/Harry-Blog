@@ -12,17 +12,17 @@ const socialMediaList = [
     },
     {
         name: 'LinkedIn',
-        href: 'https://linkedin.com/in/HarrryHe',
+        href: 'www.linkedin.com/in/jiacheng-he-harry',
         Icon: LinkedInIcon,
     },
     {
         name: 'Bilibili',
-        href: 'https://space.bilibili.com/yourBilibiliID',
+        href: 'https://space.bilibili.com/678613973',
         Icon: BilibiliIcon,
     },
     {
         name: 'Email',
-        href: 'mailto:harrryhe@example.com',
+        href: 'mailto:harry.he@temple.edu',
         Icon: EmailIcon,
     },
 ];
