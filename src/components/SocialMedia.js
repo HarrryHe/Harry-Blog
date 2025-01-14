@@ -12,7 +12,7 @@ const socialMediaList = [
     },
     {
         name: 'LinkedIn',
-        href: 'www.linkedin.com/in/jiacheng-he-harry',
+        href: 'https://linkedin.com/in/jiacheng-he-harry',
         Icon: LinkedInIcon,
     },
     {

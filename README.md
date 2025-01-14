@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Harry's Blog
 
-## Getting Started
+A personal blog website built with Next.js + React + Tailwind + MDX
 
-First, run the development server:
+<img src="./public/Images/kemiao.jpg" alt="赞美愚者" height="280" width="280"/>
 
+## 📌 About
+
+This is a personal ~~website~~ blog I created to share tech-related posts and personal thoughts as I continue my journey of learning and life. It will be continuously updated with new features and UI improvements in the future.
+
+## 🛠️ Stuff I used
+
+- **MDX**
+- **React**
+- **Vercel**
+- **Next.js**
+- **Tailwind**
+- **Material UI**
+- **framer-motion**
+
+## 🚩 Features
+
+- **GitHub API**: Fetches GitHub repositories API to display the top 5 starred projects.
+- **Dark/Light Mode**: Implements seamless theme switching using `next-themes`.
+- **Blogs**: Utilizes MDX to process `.mdx` files and create a blog system.
+- **Tag Cloud**: Generates a tag cloud by extracting tags from blog metadata.
+- **Comments**: Integrates a comment system powered by `Giscus`.
+- **Animations**: Implements smooth UI transitions and effects using `Framer Motion`.  
+
+<br>
+
+# How to Run
+
+## 🚀 Prerequisites
+
+Make sure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (version 16 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+## 🪄 Steps to Run
+
+### 1. Clone the Repository
+
+Use `git` to clone the project to your local machine:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/HarrryHe/Harry-Blog.git
+cd Harry-Blog
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Install the required dependencies using `npm` or `yarn`
+```bash
+npm install
+```
+or
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Start the Development Server
 
-## Learn More
+Run the following command to start the development server:
+```bash
+npm run dev
+```
+or
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open your browser and visit
+```
+http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Customize Your Blog
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Once you've started the development server, feel free to make this blog your own. You can:
+- Modify existing components or add new ones.
+- Customize the styles and layouts to suit your preferences.
+- Update content, features, or designs to align with your personal information.
 
-## Deploy on Vercel
+## 💭 Giscus Setting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. Install Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Make sure you already ran `npm install` or `yarn install`. If not, you need to run 
+```bash
+# Change npm with the package manager you use 
+npm i @giscus/react
+```
+
+### 2. Open the Discussions section in your GitHub repository settings:
+
+Go to your repository settings on GitHub, and enable discussions.  
+
+### 3. Add Giscus into your project
+
+Import the Giscus component:
+
+```bash
+import Giscus from '@giscus/react';
+```
+
+Add the component to your page (sample):
+
+```bash
+<Giscus
+      id="comments"
+      repo="giscus/giscus-component"
+      repoId="MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA="
+      category="Announcements"
+      categoryId="DIC_kwDOF1L2fM4B-hVS"
+      mapping="specific"
+      term="Welcome to @giscus/react component!"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="top"
+      theme="light"
+      lang="en"
+      loading="lazy"
+    />
+```
+
+See more in 
+[Github Giscus Documentation](https://github.com/giscus/giscus-component)
+
+## 🏠 Build for Production
+
+To create an optimized production build, run:
+
+```bash
+npm run build
+```
+or
+```bash
+yarn build
+```
+
+You can then start the production server using:
+```bash
+npm run start
+```
+or
+```bash
+yarn start
+```
+
+## ❤️ Contribution
+
+Contributions are welcome! Fork the repository, make your changes, and open a pull request. Please keep your changes focused and well-documented. Thank you for your support! 🎉
+
+
+
+
+
+
